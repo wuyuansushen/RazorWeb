@@ -12,6 +12,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RazorWeb.Models;
+using RazorWeb.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.InMemory;
 
 namespace RazorWeb
 {
@@ -27,6 +30,7 @@ namespace RazorWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CustomerDbContext>(options => options.UseInMemoryDatabase("name"));
             services.AddRazorPages();
 
             services.AddHttpContextAccessor();

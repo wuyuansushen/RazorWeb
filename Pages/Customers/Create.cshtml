@@ -1,0 +1,12 @@
+﻿@page
+@model RazorWeb.Pages.Customers.CreateModel 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Contact";
+}
+<p>Enter your name:</p>
+<form method="post">
+    Name:
+    <input asp-for="ACustomer.Name" />
+    <input type="submit" />
+</form>
