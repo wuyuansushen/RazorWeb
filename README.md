@@ -73,9 +73,7 @@ Check Server Framework version
 dotnet --info
 ```
 
-Check framework version of published project in `<application>.runtimeconfig.json`file under published directory
-
->:warning: Modify value of `runtimeOptions.framework.version` from `"5.0.0"` to `"5.0.0-preview.8.20414.8"`( shown by `dotnet --info` )
+>:warning:Check framework version of published project in `<application>.runtimeconfig.json`file under published directory and modify value of `runtimeOptions->framework->version` to corresponding version value shown by `dotnet --info` previously.
 ```
 {
   "runtimeOptions": {
@@ -92,7 +90,8 @@ Check framework version of published project in `<application>.runtimeconfig.jso
 }
 ```
 
-### 6.2 Package Content Directory together
+### 6.2 Static Directories Package
+
 Package all Directories under project exclude these three directories( `bin`, `obj`, `Properties` )
 
 ```
