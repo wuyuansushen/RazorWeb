@@ -18,7 +18,7 @@ namespace RazorWeb.Models
         }
         public class IpReflection :IIpReflection
         {
-            private IHttpContextAccessor _httpContextAccessor;
+            private readonly IHttpContextAccessor _httpContextAccessor;
             public IpReflection(IHttpContextAccessor httpContextAccessor)
             {
                 _httpContextAccessor = httpContextAccessor;
